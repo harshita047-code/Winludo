@@ -1,0 +1,77 @@
+.about-winludo {
+  background: linear-gradient(90deg, #1e1f3a, #23255b);
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 80px 10px !important;
+  }
+  
+  .about-winludo ul li {
+    transition: transform 0.3s ease;
+  }
+  .about-winludo ul li:hover {
+    color: #FFD700;
+    transform: translateX(8px);
+  }
+  /* Fade in one-by-one animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.special-point {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.special-point:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.special-point:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.special-point:nth-child(3) {
+  animation-delay: 0.9s;
+}
+.special-point:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+
+.about-winludo h2,
+.about-winludo h4,
+.about-winludo h5 {
+  font-size: 1.9rem !important;
+}
+
+.about-winludo p,
+.about-winludo ul li,
+.about-winludo .fs-5,
+.about-winludo .lead {
+  font-size: 1.2rem !important;
+  font-weight: 300 !important;
+}
+  @media  (max-width: 480px)  {
+    .about-winludo{
+      padding-top: 80px !important;
+    }
+    .about-winludo h2,
+  .about-winludo h4,
+  .about-winludo h5 {
+    font-size: 1.6rem !important;
+  }
+
+  .about-winludo p,
+  .about-winludo ul li,
+  .about-winludo .fs-5,
+  .about-winludo .lead {
+    font-size: 1rem !important;
+  }
+
+  }
+  

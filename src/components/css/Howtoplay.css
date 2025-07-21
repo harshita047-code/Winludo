@@ -1,0 +1,97 @@
+.htp-section {
+  padding: 80px 20px;
+ background: linear-gradient(90deg, #1e1f3a, #23255b);
+  color: white;
+  
+}
+
+.htp-heading {
+  font-size: 2rem;
+  color:#FFD700;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.htp-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.htp-card {
+  background: rgba(255, 255, 255, 0.05);
+  /* border: 1px solid #ffffff1a; */
+  border: 1px solid #ffc10783;
+  border-radius: 16px;
+  padding: 25px;
+  max-width: 280px;
+  text-align: center;
+  transition: all 0.3s ease;
+  animation: slideIn 0.7s ease forwards;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.htp-icon {
+  font-size: 36px;
+  color: #FFD700;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.htp-card h4 {
+  font-size: 1.2rem;
+  color: #FFD700;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.htp-card p {
+  font-size: 0.95rem;
+  color: #FFD700;
+}
+.htp-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(90deg, #fcbd00, #fcd146, #ecb308);
+  background-size: 300% 300%;
+  z-index: -1;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: pulseGlow 4s ease infinite;
+}
+
+.htp-card:hover::before {
+  opacity: 0.6;  
+}
+
+.htp-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.htp-card:hover .htp-icon,
+.htp-card:hover h4 ,
+.htp-card:hover p{
+  color: #23255b;
+}
+
+@media (max-width: 768px) {
+  .htp-card {
+    width: 100%;
+    max-width: 90%;
+  }
+}
